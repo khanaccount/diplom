@@ -1,0 +1,22 @@
+$brand-color: #007bff;
+$border-radius: 8px;
+
+@mixin custom-scrollbar($radius) {
+  &::-webkit-scrollbar {
+    width: 8px;
+    border-radius: $radius;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: $radius;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+  }
+}

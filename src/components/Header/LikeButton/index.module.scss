@@ -1,0 +1,46 @@
+@use "styles/variables.scss" as *;
+
+.likeMenu {
+  position: relative;
+  .button {
+    cursor: pointer;
+  }
+  .likedList {
+    right: 0;
+    width: 300px;
+    max-height: 300px;
+    position: absolute;
+    background-color: white;
+    overflow-y: auto;
+    border-radius: $border-radius;
+    border: 1px solid #ccc;
+    @include custom-scrollbar(8px);
+
+    .item {
+      .href {
+        display: flex;
+        padding: 5px 0;
+        gap: 5px;
+        align-items: center;
+        justify-content: space-between;
+
+        .name {
+          font-size: 20px;
+        }
+        .likeButton {
+          height: 20px;
+          margin-right: 20px;
+          background: none;
+          border: none;
+          cursor: pointer;
+        }
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+        .img {
+          width: 50px;
+        }
+      }
+    }
+  }
+}

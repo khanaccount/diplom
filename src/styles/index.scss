@@ -1,0 +1,35 @@
+@use "./normalize.scss" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+* {
+  font-family: "Nunito", "Roboto", "Jost", "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #fafafa;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main {
+  flex: 1;
+}
+
+.container {
+  max-width: 1650px;
+  margin: 0 auto;
+  padding: 0 15px;
+}

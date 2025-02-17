@@ -1,0 +1,70 @@
+@use "styles/variables.scss" as *;
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: $border-radius;
+  background: #fff;
+  width: 100%;
+  max-width: 500px;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+
+  &:focus-within {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+}
+
+.input {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  font-size: 14px;
+  color: #333;
+
+  &::placeholder {
+    color: #aaa;
+  }
+}
+
+.icon {
+  color: #888;
+}
+
+.searchBlock {
+  position: absolute;
+  top: 50px;
+  border: 1px solid #ccc;
+  left: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: white;
+  border-radius: $border-radius;
+  padding: 10px 0;
+  width: 100%;
+
+  @include custom-scrollbar(8px);
+
+  .items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    left: 0;
+    height: 40px;
+    padding-left: 20px;
+
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+    &:hover {
+      background-color: rgb(243, 243, 243);
+    }
+  }
+}

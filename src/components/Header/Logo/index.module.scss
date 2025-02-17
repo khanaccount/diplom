@@ -1,0 +1,7 @@
+@use "styles/variables.scss" as *;
+
+.logo {
+  font-size: 52px;
+  color: $brand-color;
+  text-transform: uppercase;
+}
