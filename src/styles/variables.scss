@@ -1,5 +1,7 @@
 $brand-color: #007bff;
 $border-radius: 8px;
+$white-color: #fff;
+$transition: all 0.5s ease;
 
 @mixin custom-scrollbar($radius) {
   &::-webkit-scrollbar {

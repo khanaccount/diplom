@@ -1,0 +1,40 @@
+@use "styles/variables.scss" as *;
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: $border-radius;
+    transition: $transition;
+
+    &:focus {
+      border-color: $brand-color;
+      outline: none;
+    }
+  }
+
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+
+  .button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: $border-radius;
+    background-color: #dc3545;
+    color: $white-color;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      background-color: darken(#dc3545, 10%);
+    }
+  }
+}

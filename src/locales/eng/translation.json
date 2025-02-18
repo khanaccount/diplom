@@ -1,0 +1,14 @@
+{
+  "header": {
+    "auth": {
+      "login": "Login",
+      "register": "Register"
+    },
+    "logo": {
+      "title": "coldness"
+    },
+    "input": {
+      "search": "Search for products..."
+    }
+  }
+}

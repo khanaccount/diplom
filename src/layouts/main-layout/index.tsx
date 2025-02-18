@@ -1,9 +1,12 @@
 import React from "react";
 import { Header } from "components/Header";
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
 import { Footer } from "components/Footer";
 
 export const Layout: React.FC = () => {
+  const location = useLocation();
+  const isAuthPage = location.pathname === "/auth";
+
   return (
     <>
       <header className="header">
@@ -14,9 +17,11 @@ export const Layout: React.FC = () => {
         <Outlet />
       </main>
 
-      <footer>
-        <Footer />
-      </footer>
+      {!isAuthPage && (
+        <footer>
+          <Footer />
+        </footer>
+      )}
     </>
   );
 };

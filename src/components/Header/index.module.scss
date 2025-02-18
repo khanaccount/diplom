@@ -10,6 +10,13 @@
     .actions {
       display: flex;
       gap: 20px;
+      max-height: 20px;
+    }
+
+    .auth {
+      display: flex;
+      gap: 20px;
+      align-items: center;
     }
   }
 }

@@ -1,25 +1,49 @@
 import React, { useRef, useState } from "react";
 import { Search as SearchIcon } from "lucide-react";
 import { useClickAway } from "react-use";
+import refPng from "assets/refrigerators/pngegg.png";
+import { useTranslation } from "react-i18next";
 
 import s from "./index.module.scss";
 
 const refrigerators = [
-  { name: "Холодильник 1", index: 1 },
-  { name: "Холодильник 2", index: 2 },
-  { name: "Холодильник 3", index: 3 },
-  { name: "Холодильник 4", index: 4 },
-  { name: "Холодильник 5", index: 5 },
-  { name: "Холодильник 6", index: 6 },
-  { name: "Холодильник 7", index: 7 },
-  { name: "Холодильник 8", index: 8 },
-  { name: "Холодильник 9", index: 9 },
+  {
+    href: "/",
+    name: "Холодильник Бирюса W980NF",
+    image: refPng,
+    id: 1,
+  },
+  {
+    href: "/",
+    name: "Холодильник Бирюса W980NF",
+    image: refPng,
+    id: 2,
+  },
+  {
+    href: "/",
+    name: "Холодильник Бирюса W980NF",
+    image: refPng,
+    id: 3,
+  },
+  {
+    href: "/",
+    name: "Холодильник Бирюса W980NF",
+    image: refPng,
+    id: 4,
+  },
+  {
+    href: "/",
+    name: "Холодильник Бирюса W980NF",
+    image: refPng,
+    id: 5,
+  },
 ];
 
 export const Search: React.FC = () => {
   const [query, setQuery] = useState("");
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const ref = useRef(null);
+  const { t } = useTranslation();
 
   useClickAway(ref, () => {
     setIsOpen(false);
@@ -37,7 +61,7 @@ export const Search: React.FC = () => {
         className={s.input}
         value={query}
         type="text"
-        placeholder="Поиск товаров..."
+        placeholder={t("header.input.search")}
         onChange={(e) => {
           setQuery(e.target.value);
           setIsOpen(e.target.value.length > 0);
@@ -47,8 +71,9 @@ export const Search: React.FC = () => {
       {isOpen && filteredItems.length > 0 && (
         <div className={s.searchBlock}>
           {filteredItems.map((item) => (
-            <div className={s.items} key={item.index}>
-              {item.name}
+            <div className={s.items} key={item.id}>
+              <img className={s.img} src={item.image} alt={item.name} />
+              <p className={s.text}>{item.name}</p>
             </div>
           ))}
         </div>
