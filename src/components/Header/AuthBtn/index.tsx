@@ -7,10 +7,10 @@ export const AuthBtn: React.FC = () => {
   const { t } = useTranslation();
   return (
     <>
-      <Link to={"/auth"}>
+      <Link to="/auth?mode=login">
         <button className={s.logIn}>{t("header.auth.login")}</button>
       </Link>
-      <Link to={"/auth"}>
+      <Link to="/auth?mode=register">
         <button className={s.register}>{t("header.auth.register")}</button>
       </Link>
     </>

@@ -10,5 +10,33 @@
     "input": {
       "search": "Search for products..."
     }
+  },
+  "auth": {
+    "noAccount": "Don't have an account? Sign up",
+    "haveAccount": "Already have an account? Sign in",
+    "sendCode": "Get code",
+    "acceptCode": "Confirm code",
+    "errorMessage": "Required field",
+    "password": "Password",
+
+    "timerText": {
+      "text": "Sent. Resend in:",
+      "sec": "sec"
+    },
+
+    "login": {
+      "title": "Sign In",
+      "email": "Enter your email",
+      "rememberMe": "Remember me",
+      "incorrectEmail": "Invalid email"
+    },
+    "register": {
+      "title": "Sign Up",
+      "emailOrPhone": "Email or phone number",
+      "passwordMatch": "Passwords must match",
+      "submitRegister": "Confirm registration",
+      "confirmPassword": "Confirm password",
+      "minLength": "Minimum 6 characters"
+    }
   }
 }

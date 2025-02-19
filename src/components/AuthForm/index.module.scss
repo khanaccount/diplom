@@ -1,5 +1,5 @@
 @use "styles/variables.scss" as *;
-
+@use "sass:color";
 .authWrapper {
   display: flex;
   justify-content: center;
@@ -33,6 +33,6 @@
   transition: $transition;
 
   &:hover {
-    color: darken($brand-color, 10%);
+    color: color.adjust($brand-color, $lightness: -10%);
   }
 }

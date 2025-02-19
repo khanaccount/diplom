@@ -10,5 +10,34 @@
     "input": {
       "search": "Поиск товаров..."
     }
+  },
+  "auth": {
+    "noAccount": "Нет аккаунта? Зарегистрируйтесь",
+    "haveAccount": "Уже есть аккаунт? Войти",
+    "sendCode": "Получить код",
+    "acceptCode": "Подтвердить код",
+    "errorMessage": "Обязательное поле",
+    "password": "Пароль",
+
+    "timerText": {
+      "text": "Отправлено. Повторная отправка через:",
+      "sec": "сек"
+    },
+
+    "login": {
+      "title": "Вход",
+      "email": "Введите почту",
+
+      "rememberMe": "Запомнить меня",
+      "incorrectEmail": "Неверный email"
+    },
+    "register": {
+      "title": "Регистрация",
+      "emailOrPhone": "Почту или телефон",
+      "passwordMatch": "Пароли должны совпадать",
+      "submitRegister": "Подтвердить регистрацию",
+      "confirmPassword": "Подтвердите пароль",
+      "minLength": "Минимум 6 символов"
+    }
   }
 }

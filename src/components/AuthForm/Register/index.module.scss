@@ -1,15 +1,78 @@
 @use "styles/variables.scss" as *;
-
+@use "sass:color";
 .registerForm {
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+}
+.inputBlock {
+  width: 100%;
+  text-align: start;
+  position: relative;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
 
   .input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: $border-radius;
+    font-size: 16px;
+    transition: $transition;
+    box-sizing: border-box;
+    position: relative;
+    &:focus {
+      border-color: $brand-color;
+      outline: none;
+    }
+  }
+
+  .toggleShowPassword {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+.error {
+  position: absolute;
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  background: $brand-color;
+  color: $white-color;
+  border: none;
+  border-radius: $border-radius;
+  font-size: 16px;
+  cursor: pointer;
+  transition: $transition;
+  box-sizing: border-box;
+
+  &:hover {
+    background: color.adjust($brand-color, $lightness: -10%);
+  }
+}
+
+.codeInput {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+
+  input {
+    width: 40px;
+    height: 50px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     transition: $transition;
 
     &:focus {
@@ -17,24 +80,24 @@
       outline: none;
     }
   }
+}
 
-  .error {
-    color: red;
-    font-size: 12px;
-  }
+.rememberMe {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  cursor: pointer;
 
-  .button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: $border-radius;
-    background-color: #dc3545;
-    color: $white-color;
+  input {
     cursor: pointer;
-    transition: $transition;
-
-    &:hover {
-      background-color: darken(#dc3545, 10%);
-    }
   }
+}
+
+.timer {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
 }
